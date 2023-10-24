@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<RootNamespace>TreeNewBee</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Folder Include="EntityFrameworkCore\" />
+		<Folder Include="Uow\" />
+		<Folder Include="Autofac\" />
+		<Folder Include="AutoMapper\" />
+		<Folder Include="EventBus\" />
+	</ItemGroup>
+
+</Project>

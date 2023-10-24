@@ -5,17 +5,27 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C7FC9AD0-7B58-4EA7-9547-D954C9D827FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeNewBee.MicroService.OrderCenter", "src\TreeNewBee.MicroService.OrderCenter\TreeNewBee.MicroService.OrderCenter.csproj", "{468B206D-4C01-4A6B-8F43-DE667FB2363F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TreeNewBee.MicroService.OrderCenter", "src\TreeNewBee.MicroService.OrderCenter\TreeNewBee.MicroService.OrderCenter.csproj", "{468B206D-4C01-4A6B-8F43-DE667FB2363F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TreeNewBee.MicroService.UserCenter", "src\TreeNewBee.MicroService.UserCenter\TreeNewBee.MicroService.UserCenter.csproj", "{91709F18-8199-4F80-855E-369AABABA256}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeNewBee.MicroService.PublicGateway", "src\TreeNewBee.MicroService.PublicGateway\TreeNewBee.MicroService.PublicGateway.csproj", "{7ABA9566-46EA-480D-A7BA-1E377A9FD626}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TreeNewBee.MicroService.PublicGateway", "src\TreeNewBee.MicroService.PublicGateway\TreeNewBee.MicroService.PublicGateway.csproj", "{7ABA9566-46EA-480D-A7BA-1E377A9FD626}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeNewBee.MicroService.PrivateGateway", "src\TreeNewBee.MicroService.PrivateGateway\TreeNewBee.MicroService.PrivateGateway.csproj", "{65FB1C3F-98AC-4A47-8CE1-E2D3B4960203}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TreeNewBee.MicroService.PrivateGateway", "src\TreeNewBee.MicroService.PrivateGateway\TreeNewBee.MicroService.PrivateGateway.csproj", "{65FB1C3F-98AC-4A47-8CE1-E2D3B4960203}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeNewBee.MicroService.Shop.Host", "src\TreeNewBee.MicroService.Shop.Host\TreeNewBee.MicroService.Shop.Host.csproj", "{D8088373-3C16-4116-B661-443B98F95638}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TreeNewBee.MicroService.Shop.Host", "src\TreeNewBee.MicroService.Shop.Host\TreeNewBee.MicroService.Shop.Host.csproj", "{D8088373-3C16-4116-B661-443B98F95638}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeNewBee.MicroService.Shop.Blazor", "src\TreeNewBee.MicroService.Shop.Blazor\TreeNewBee.MicroService.Shop.Blazor.csproj", "{95A941D0-31D7-406D-9F1F-60CB4DB8FAF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TreeNewBee.MicroService.Shop.Blazor", "src\TreeNewBee.MicroService.Shop.Blazor\TreeNewBee.MicroService.Shop.Blazor.csproj", "{95A941D0-31D7-406D-9F1F-60CB4DB8FAF1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "framework", "framework", "{182FA20D-C27C-4538-9FA6-31DD70EA8348}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TreeNewBee.Domain", "framework\TreeNewBee.Domain\TreeNewBee.Domain.csproj", "{6EA184FB-D803-4BAF-8D51-2ED8EA4C7216}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TreeNewBee.Infrastructure", "framework\TreeNewBee.Infrastructure\TreeNewBee.Infrastructure.csproj", "{5E4073A4-CC69-4FDB-AD5F-4C25A1E15DC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeNewBee.Application", "framework\TreeNewBee.Application\TreeNewBee.Application.csproj", "{074D03DF-F2C7-4503-BD9D-AA33713AE85D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeNewBee.AspNetCore", "framework\TreeNewBee.AspNetCore\TreeNewBee.AspNetCore.csproj", "{1C901A3E-A1AD-4E41-A74D-544C7112E74D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +57,22 @@ Global
 		{95A941D0-31D7-406D-9F1F-60CB4DB8FAF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95A941D0-31D7-406D-9F1F-60CB4DB8FAF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95A941D0-31D7-406D-9F1F-60CB4DB8FAF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EA184FB-D803-4BAF-8D51-2ED8EA4C7216}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EA184FB-D803-4BAF-8D51-2ED8EA4C7216}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EA184FB-D803-4BAF-8D51-2ED8EA4C7216}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EA184FB-D803-4BAF-8D51-2ED8EA4C7216}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E4073A4-CC69-4FDB-AD5F-4C25A1E15DC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E4073A4-CC69-4FDB-AD5F-4C25A1E15DC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E4073A4-CC69-4FDB-AD5F-4C25A1E15DC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E4073A4-CC69-4FDB-AD5F-4C25A1E15DC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{074D03DF-F2C7-4503-BD9D-AA33713AE85D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{074D03DF-F2C7-4503-BD9D-AA33713AE85D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{074D03DF-F2C7-4503-BD9D-AA33713AE85D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{074D03DF-F2C7-4503-BD9D-AA33713AE85D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C901A3E-A1AD-4E41-A74D-544C7112E74D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C901A3E-A1AD-4E41-A74D-544C7112E74D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C901A3E-A1AD-4E41-A74D-544C7112E74D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C901A3E-A1AD-4E41-A74D-544C7112E74D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +84,10 @@ Global
 		{65FB1C3F-98AC-4A47-8CE1-E2D3B4960203} = {C7FC9AD0-7B58-4EA7-9547-D954C9D827FB}
 		{D8088373-3C16-4116-B661-443B98F95638} = {C7FC9AD0-7B58-4EA7-9547-D954C9D827FB}
 		{95A941D0-31D7-406D-9F1F-60CB4DB8FAF1} = {C7FC9AD0-7B58-4EA7-9547-D954C9D827FB}
+		{6EA184FB-D803-4BAF-8D51-2ED8EA4C7216} = {182FA20D-C27C-4538-9FA6-31DD70EA8348}
+		{5E4073A4-CC69-4FDB-AD5F-4C25A1E15DC9} = {182FA20D-C27C-4538-9FA6-31DD70EA8348}
+		{074D03DF-F2C7-4503-BD9D-AA33713AE85D} = {182FA20D-C27C-4538-9FA6-31DD70EA8348}
+		{1C901A3E-A1AD-4E41-A74D-544C7112E74D} = {182FA20D-C27C-4538-9FA6-31DD70EA8348}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3C7F8CDF-C64C-462B-BC17-04F0A0D3AA16}

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace TreeNewBee.MicroService.OrderCenter.Controllers;
+namespace TreeNewBee.Controllers;
 
 [ApiController]
 [Route("[controller]")]

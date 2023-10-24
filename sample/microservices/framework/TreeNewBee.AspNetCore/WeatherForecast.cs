@@ -1,4 +1,4 @@
-namespace TreeNewBee.MicroService.PublicGateway;
+namespace TreeNewBee;
 
 public class WeatherForecast
 {
