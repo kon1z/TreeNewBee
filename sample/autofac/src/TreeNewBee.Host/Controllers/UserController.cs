@@ -11,27 +11,25 @@ namespace TreeNewBee.Controllers
 	public class UserController : ControllerBase
 	{
 		private readonly UserDomainService _userDomainService;
-		private readonly IRepository<User, Guid> _userRepository;
+		//private readonly IRepository<User, Guid> _userRepository;
 
 		public UserController(
-			UserDomainService userDomainService,
-			IRepository<User, Guid> userRepository)
+			UserDomainService userDomainService)
 		{
 			_userDomainService = userDomainService;
-			_userRepository = userRepository;
 		}
 
-		[HttpGet("user/{id:guid}")]
-		public async Task<IActionResult> GetUserAsync([FromRoute] Guid id)
-		{
-			var user = await _userRepository.FirstOrDefaultAsync(x => x.Id == id);
-			if (user == null)
-			{
-				return NotFound(id);
-			}
+		//[HttpGet("user/{id:guid}")]
+		//public async Task<IActionResult> GetUserAsync([FromRoute] Guid id)
+		//{
+		//	var user = await _userRepository.FirstOrDefaultAsync(x => x.Id == id);
+		//	if (user == null)
+		//	{
+		//		return NotFound(id);
+		//	}
 
-			return Ok(user);
-		}
+		//	return Ok(user);
+		//}
 
 		[HttpPost("user")]
 		public async Task<IActionResult> CreateUserAsync([FromBody] CreateUserDto input)
@@ -41,12 +39,12 @@ namespace TreeNewBee.Controllers
 			return Created($"~/user/{user.Id}", user);
 		}
 
-		[HttpGet("users")]
-		public async Task<IActionResult> GetAllUsersAsync()
-		{
-			var users = await _userRepository.GetAllAsync();
+		//[HttpGet("users")]
+		//public async Task<IActionResult> GetAllUsersAsync()
+		//{
+		//	var users = await _userRepository.GetAllAsync();
 
-			return Ok(users);
-		}
+		//	return Ok(users);
+		//}
 	}
 }

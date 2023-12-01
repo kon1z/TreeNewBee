@@ -1,21 +1,21 @@
-﻿using System.Security.AccessControl;
-using TreeNewBee.Autofac.DependencyInjection;
+﻿using TreeNewBee.Autofac.DependencyInjection;
 using TreeNewBee.Domain.Entities;
-using TreeNewBee.Domain.Repositories;
 
 namespace TreeNewBee.Domain.DomainService;
 
-public class UserDomainService : IScopedDependency
+public class UserDomainService : ITransientDependency
 {
-	private IUserRepository _userRepository;
+	//private IUserRepository _userRepository;
 
-	public UserDomainService(IUserRepository userRepository)
-	{
-		_userRepository = userRepository;
-	}
+	//public UserDomainService(IUserRepository userRepository)
+	//{
+	//	_userRepository = userRepository;
+	//}
 
 	public async Task<User> CreateUserAsync(string name)
 	{
-		return await _userRepository.InsertAsync(new User(name));
+		//return await _userRepository.InsertAsync(new User(name));
+		
+		throw new NotImplementedException();
 	}
 }

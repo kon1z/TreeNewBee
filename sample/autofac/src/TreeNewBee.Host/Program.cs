@@ -3,38 +3,32 @@ using Autofac.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 using TreeNewBee.Autofac.DependencyInjection;
+using TreeNewBee.Domain.Repositories;
 using TreeNewBee.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
 
-builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory(containerBuilder =>
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
 {
-	var dataAccess = Assembly.GetExecutingAssembly();
+	var dataAccess = AppDomain.CurrentDomain.GetAssemblies()
+		.Where(x => x.FullName != null && x.FullName.StartsWith("TreeNewBee"))
+		.ToArray();
+
+	containerBuilder.RegisterType<UserRepository>().As<IUserRepository>();
 
 	containerBuilder.RegisterAssemblyTypes(dataAccess)
 		.Where(x => x.Name.EndsWith("Repository"))
 		.AsImplementedInterfaces();
 
 	containerBuilder.RegisterAssemblyTypes(dataAccess)
-		.Where(x => x.IsAssignableFrom(typeof(IScopedDependency)) && x != typeof(IScopedDependency))
+		.Where(t => typeof(ITransientDependency).IsAssignableFrom(t))
 		.AsImplementedInterfaces()
-		.InstancePerLifetimeScope()
-		.PropertiesAutowired();
+		.InstancePerDependency();
+});
 
-	containerBuilder.RegisterAssemblyTypes(dataAccess)
-		.Where(x => x.IsAssignableFrom(typeof(ISingletonDependency)) && x != typeof(ISingletonDependency))
-		.AsImplementedInterfaces()
-		.SingleInstance()
-		.PropertiesAutowired();
-
-	containerBuilder.RegisterAssemblyTypes(dataAccess)
-		.Where(x => x.IsAssignableFrom(typeof(ITransientDependency)) && x != typeof(ITransientDependency))
-		.AsImplementedInterfaces()
-		.PropertiesAutowired();
-}));
-
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddControllersAsServices();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
