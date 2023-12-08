@@ -1,7 +1,7 @@
-﻿using Acme.Book.Applications.Order.Dtos;
+﻿using Acme.Book.Applications.Orders.Dtos;
 using MediatR;
 
-namespace Acme.Book.Commends.Order;
+namespace Acme.Book.Commends.Orders;
 
 public class CreateOrderCommand : IRequest<OrderDto> 
 {

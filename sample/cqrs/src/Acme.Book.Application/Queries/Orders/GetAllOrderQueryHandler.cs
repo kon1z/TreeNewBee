@@ -1,16 +1,16 @@
-﻿using Acme.Book.Applications.Order.Dtos;
-using Acme.Book.Domain.Repositories;
-using MediatR;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Acme.Book.Applications.Orders.Dtos;
+using Acme.Book.Domain.Repositories;
+using MediatR;
 using Volo.Abp;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Uow;
 
-namespace Acme.Book.Queries.Order
+namespace Acme.Book.Queries.Orders
 {
 	[RemoteService(false)]
 	public class GetAllOrderQueryHandler : BookAppService, IRequestHandler<GetAllOrderQuery, PagedResultDto<OrderDto>>

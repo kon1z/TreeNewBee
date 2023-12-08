@@ -1,7 +1,7 @@
 ﻿using System;
 using Volo.Abp.Application.Dtos;
 
-namespace Acme.Book.Applications.Order.Dtos;
+namespace Acme.Book.Applications.Orders.Dtos;
 
 public class OrderDto : EntityDto<Guid>
 {

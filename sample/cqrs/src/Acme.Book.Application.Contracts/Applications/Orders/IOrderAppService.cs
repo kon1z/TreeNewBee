@@ -1,10 +1,10 @@
-﻿using Acme.Book.Applications.Order.Dtos;
-using Acme.Book.Commends.Order;
-using Acme.Book.Queries.Order;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using Acme.Book.Applications.Orders.Dtos;
+using Acme.Book.Commends.Orders;
+using Acme.Book.Queries.Orders;
 using Volo.Abp.Application.Dtos;
 
-namespace Acme.Book.Applications.Order;
+namespace Acme.Book.Applications.Orders;
 
 public interface IOrderAppService
 {

@@ -1,12 +1,13 @@
-﻿using Acme.Book.Applications.Order.Dtos;
+﻿using Acme.Book.Applications.Orders.Dtos;
 using Acme.Book.Domain.DomainServices;
+using Acme.Book.Domain.Entities;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 using Volo.Abp;
 using Volo.Abp.Uow;
 
-namespace Acme.Book.Commends.Order
+namespace Acme.Book.Commends.Orders
 {
 	[RemoteService(false)]
 	public class CreateOrderCommendHandler : BookAppService, IRequestHandler<CreateOrderCommand, OrderDto>
@@ -23,7 +24,7 @@ namespace Acme.Book.Commends.Order
 		{
 			var order = await _orderDomainService.CreateAsync(request.Name);
 
-			return ObjectMapper.Map<Domain.Entities.Order, OrderDto>(order);
+			return ObjectMapper.Map<Order, OrderDto>(order);
 		}
 	}
 }
