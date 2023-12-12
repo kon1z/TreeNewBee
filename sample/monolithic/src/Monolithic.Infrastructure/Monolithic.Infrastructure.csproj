@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Monolithic</RootNamespace>
+  </PropertyGroup>
+
+	<ItemGroup>
+    <ProjectReference Include="..\Monolithic.Application\Monolithic.Application.csproj" />
+    <ProjectReference Include="..\Monolithic.Domain\Monolithic.Domain.csproj" />
+  </ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="EntityFrameworkCore\Repositories\" />
+	  <Folder Include="EntityFrameworkCore\" />
+	  <Folder Include="UnitOfWork\" />
+	  <Folder Include="EventBus\" />
+	  <Folder Include="Autofac\" />
+	</ItemGroup>
+
+</Project>
