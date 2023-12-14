@@ -2,7 +2,7 @@
 
 namespace Monolithic.Identity.Entities
 {
-	public class AppUser : IdentityUser<Guid>
+	public class AppUserRole : IdentityUserRole<Guid>
 	{
 	}
 }
