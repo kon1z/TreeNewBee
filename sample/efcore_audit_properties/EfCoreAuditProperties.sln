@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8A98CD23-B8EC-4820-8E34-200FC009A831}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{F481ECCC-B4CA-4F02-993B-CC0E86EB1D5C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.AuditProperty.EntityFrameworkCore.Sqlite", "src\Demo.AuditProperty.EntityFrameworkCore.Sqlite\Demo.AuditProperty.EntityFrameworkCore.Sqlite.csproj", "{4ECE74AE-03B2-4B4B-AB63-908407CFDECF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.AuditProperty.EntityFrameworkCore.Sqlite.Tests", "test\Demo.AuditProperty.EntityFrameworkCore.Sqlite.Tests\Demo.AuditProperty.EntityFrameworkCore.Sqlite.Tests.csproj", "{F0BE9FD9-3EB2-4FD2-BFBB-4675F2D949AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4ECE74AE-03B2-4B4B-AB63-908407CFDECF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ECE74AE-03B2-4B4B-AB63-908407CFDECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ECE74AE-03B2-4B4B-AB63-908407CFDECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ECE74AE-03B2-4B4B-AB63-908407CFDECF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0BE9FD9-3EB2-4FD2-BFBB-4675F2D949AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0BE9FD9-3EB2-4FD2-BFBB-4675F2D949AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0BE9FD9-3EB2-4FD2-BFBB-4675F2D949AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0BE9FD9-3EB2-4FD2-BFBB-4675F2D949AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4ECE74AE-03B2-4B4B-AB63-908407CFDECF} = {8A98CD23-B8EC-4820-8E34-200FC009A831}
+		{F0BE9FD9-3EB2-4FD2-BFBB-4675F2D949AD} = {F481ECCC-B4CA-4F02-993B-CC0E86EB1D5C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C08818D-83EE-403A-9EDC-B4DEB3BED9E1}
+	EndGlobalSection
+EndGlobal
